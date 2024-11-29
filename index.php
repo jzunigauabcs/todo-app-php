@@ -1,5 +1,5 @@
 <?php
-define('CONTROLLERS', 'controllers');
+define('CONTROLLER', 'controllers');
 
 $controller = $_GET['controller'] ?? 'home';
 $action = $_GET['action'] ?? 'index';
