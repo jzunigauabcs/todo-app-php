@@ -39,4 +39,21 @@ class Task
             die("Ocurrió un error " . $e->getMessage());
         }
     }
+
+    public static function remove($task_id)
+    {
+        try {
+            $db = new Database();
+            $pdo = $db->getconnection();
+            $query = "DELETE FROM task WHERE id = :task_id";
+            $stmt = $pdo->prepare($query);
+            $stmt->bindValue(":task_id", $task_id);
+            $stmt->execute();
+                
+            $pdo = null;
+        }catch(PDOException $e) {
+            die("Ocurrió un error " . $e->getMessage());
+        }
+
+    }
 }

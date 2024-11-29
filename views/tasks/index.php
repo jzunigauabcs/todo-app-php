@@ -21,7 +21,7 @@
                 <ul class="todo-list">
                     <?php 
                     foreach($tasks as $task): ?>
-                    <li><?php echo $task['task']; ?></li>
+                    <li><?php echo $task['task']; ?><a href="?controller=task&action=delete&task=<?php echo $task['id'];?>"></a></li>
                     <?php 
                     endforeach;?>
                 </ul>

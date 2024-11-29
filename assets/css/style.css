@@ -89,6 +89,7 @@ div.todo {
 .todo-list li a {
 	color: red;
 	text-decoration: none;
+    margin-left: auto;
 }
 
 .todo-list li a::before {

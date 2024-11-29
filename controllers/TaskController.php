@@ -28,6 +28,17 @@ class TaskController
             }
         }
     }
+
+    public function delete()
+    {
+        if(!isset($_GET['task'])) {
+            die('No se ha especificado tarea para eliminar');
+        } else {
+            $task_id = $_GET['task'];
+            Task::remove($task_id);
+            header('Location: ?controller=task');
+        }
+    }
 }
 
 
