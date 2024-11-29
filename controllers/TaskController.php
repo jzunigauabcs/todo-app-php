@@ -10,7 +10,7 @@ class TaskController
 
     public function index()
     {
-        $tasks = Task::finAll();
+        $tasks = Task::findAll();
         require_once('views/tasks/index.php');
     }
     
@@ -18,6 +18,7 @@ class TaskController
     {
         if(!$_SERVER['REQUEST_METHOD'] === "POST") {
             die('Método incorrecto');
+            
         } else {
             if(!isset($_POST['task'])) {
                 die('El campo task no puede estar vacío');

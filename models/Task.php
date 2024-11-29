@@ -5,7 +5,7 @@ class Task
 {
     private static $table = 'task';
 
-    public static function finAll() 
+    public static function findAll() 
     {
         try {
             $db = new Database();
