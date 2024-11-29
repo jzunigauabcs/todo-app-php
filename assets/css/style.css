@@ -29,7 +29,6 @@ div.todo {
 	padding: 15px 15px 30px;
 }
 .btn {
-	align-self: center;
 	border-radius: 15px;
 	border: none;
 	background-color: #aa7ae4;
@@ -37,9 +36,10 @@ div.todo {
 	display: inline-block;
 	font-size: 1em;
 	font-weight: bolder;
-	margin-top: -20px;
+	margin-top: 10px;
 	outline: none;
 	padding: 10px;
+    cursor: pointer;
 }
 .btn:active {
 	background-color: #a66bec;
@@ -56,7 +56,8 @@ div.todo {
 }
 .todo-input {
 	border: 0;
-	/*border-bottom: 1px solid #ced4da;*/
+	border-bottom: 1px solid #ced4da;
+    padding: 3px 0;
 	width: 100%;
 }
 .todo-input:focus {
